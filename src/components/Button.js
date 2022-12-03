@@ -1,9 +1,9 @@
 import React from 'react'
+import "../styles/_button.scss"
 
-
-function Button({ imagen, tipo }) {
+function Button({ imagen, tipo, estado }) {
   return (
-    <div className={`contenedor ${tipo}`} >
+    <div className={`contenedor ${tipo} ${estado}`} >
         <div className="contenedor-imagen">
             <img src={imagen} alt="boton-paper" />
         </div>

@@ -3,10 +3,13 @@ import "./styles/style.scss"
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Rules from "./components/Rules";
+import Playing from "./components/Playing";
 import Paper from "./images/icon-paper.svg";
 import Rock from "./images/icon-rock.svg";
 import Scissors from "./images/icon-scissors.svg";
 import { useState } from "react";
+
+
 
 function App() {
 
@@ -22,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Header score ="12"></Header>
-      <main>
+      <main className="main-activo">
         <div className="boton">
           <Button tipo="paper" imagen={Paper}></Button>
         </div>
@@ -33,6 +36,7 @@ function App() {
         <Button tipo="rock" imagen={Rock}></Button>
         </div>
       </main>
+      <Playing></Playing>
       <Rules mostrar={mostrarRules} clickCerrar={Cerrar} clickAbrir={Mostrar}></Rules>
     </div>
   );

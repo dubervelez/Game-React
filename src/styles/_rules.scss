@@ -5,9 +5,7 @@
     width: 8rem;
     height: 40px;
     max-width: 128px;
-    text-align: center;
     margin: auto;
-    margin-top: 8.75rem;
     border-radius: 0.5rem;
     border: 1px solid #fff;
     background-color: transparent;
@@ -19,6 +17,11 @@
     display: flex;
     justify-content: center ;
     align-items: center;
+    position: fixed;
+    bottom: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+
 
 }
 .btn-rules:hover{

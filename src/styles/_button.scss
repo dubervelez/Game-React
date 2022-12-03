@@ -8,8 +8,12 @@
     place-items: center;
     max-width: 198px;
     max-height: 194px;
-   
 }
+.contenedor:hover{
+    cursor: pointer;
+    outline: 0.6rem solid rgba(255, 255, 255, 0.05) ;
+}
+
 .contenedor-imagen{
     background-color: $white;
     width: 6.1875rem;
@@ -37,3 +41,8 @@
 }
 
 
+// jugando
+
+.jugando{
+    background-color: transparent;
+}

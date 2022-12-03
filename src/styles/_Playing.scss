@@ -1,0 +1,13 @@
+.pantalla-jugando{
+    position: absolute;
+    max-width: 700px;
+    width: 311px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 476px;
+    margin: auto;
+    transition: all 0.5s;
+}
