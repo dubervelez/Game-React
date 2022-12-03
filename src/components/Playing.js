@@ -20,7 +20,8 @@ function Playing() {
         </div>
         
         <div className='mensaje-resultado'>
-            <h2></h2>
+            <h2 className='mensaje-h2'>YOU WIN</h2>
+            <button className='mensaje-btn'>PLAY AGAIN</button>
         </div>
     </div>
   )
