@@ -1,0 +1,95 @@
+@import "../styles/colors";
+
+.btn-rules{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 8rem;
+    height: 40px;
+    max-width: 128px;
+    text-align: center;
+    margin: auto;
+    margin-top: 8.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-size: 1rem;
+    letter-spacing: 0.1563rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+
+}
+.btn-rules:hover{
+    background-color: #fff;
+    color: black;
+}
+
+.rules{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    background-color: $white;
+}
+.rules.activo{
+    display: flex;
+}
+.fondo-rules{
+    display: flex;
+    justify-content: center;
+}
+.btn-cerrar-rules{
+    position: absolute;
+    bottom: 60px;
+    width: 2.5rem;
+    cursor: pointer;
+}
+.btn-cerrar-rules:hover{
+    color: $Rock-bg;
+}
+
+
+@media only screen and (min-width: 720px) {
+    .contenedor-btn-rules{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .btn-rules{
+        margin: 0;
+    }
+    .rules{
+        background-color: rgba(0, 0, 0, 0.247);
+    }
+    .fondo-rules{
+        width: 400px;
+        height: 461px;
+        border-radius: 8px;
+        background-color: #fff;
+        box-shadow: 0 3px 3px 0 rgba(255, 255, 255, 0.5);
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        padding: 1em;
+        
+    }
+    .btn-cerrar-rules{
+        position: absolute;
+        top: 0.5rem;
+        right: 0.5rem;
+        width: 1.2rem;
+        cursor: pointer;
+    }
+    
+}
