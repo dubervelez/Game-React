@@ -1,13 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap');
+@import "./colors";
+
 .pantalla-jugando{
-    position: absolute;
     max-width: 700px;
     width: 311px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 476px;
     margin: auto;
     transition: all 0.5s;
+}
+
+.contenedor-boton{
+    display: flex;
+    justify-content: space-between;
+}
+
+.juego-op > span{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    letter-spacing: 1.88px;
+    margin-top: 17px;
+    color: $white ;
 }
