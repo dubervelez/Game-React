@@ -39,8 +39,31 @@ main{
     justify-content: center;
 }
 
+.contenedor-btn-rules{
+    display: flex;
+}
 
-
+.btn-rules{
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    width: 8rem;
+    height: 40px;
+    max-width: 128px;
+    text-align: center;
+    margin: auto;
+    margin-top: 8.75rem;
+    border-radius: 0.5rem;
+    border: 1px solid #fff;
+    background-color: transparent;
+    font-size: 1rem;
+    letter-spacing: 0.1563rem;
+    font-weight: 600;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-rules:hover{
+    background-color: #fff;
+    color: black;
+}
 
 @media only screen and (min-width: 425px) {
     
@@ -58,6 +81,13 @@ main{
         max-width: 476px;
         max-height: 430px;
         margin-top: 64px;
+    }
+    .contenedor-btn-rules{
+        display: flex;
+        justify-content: flex-end;
+    }
+    .btn-rules{
+        margin: 0;
     }
     
 }

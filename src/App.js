@@ -19,7 +19,6 @@ function App() {
     setMostrarRules(""); 
   };
 
-
   return (
     <div className="App">
       <Header score ="12"></Header>
