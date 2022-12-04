@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Game-React/static/css/main.8c257944.css",
-    "main.js": "/Game-React/static/js/main.ee3573f5.js",
+    "main.js": "/Game-React/static/js/main.b3c42abf.js",
     "static/media/image-rules.svg": "/Game-React/static/media/image-rules.258b753fb6284dc8ae00c5b2fa7938c0.svg",
     "static/media/icon-paper.svg": "/Game-React/static/media/icon-paper.8b57a6b108c1b8ae82931a39b10f96a2.svg",
     "static/media/icon-scissors.svg": "/Game-React/static/media/icon-scissors.3b1a5d7eb0b2f1fd3e955865ec04d9ed.svg",
@@ -10,10 +10,10 @@
     "static/media/icon-close.svg": "/Game-React/static/media/icon-close.bde602ecd1a4e55e0c27137ed651e027.svg",
     "static/media/bg-triangle.svg": "/Game-React/static/media/bg-triangle.77c6ca418d3751d8f717.svg",
     "main.8c257944.css.map": "/Game-React/static/css/main.8c257944.css.map",
-    "main.ee3573f5.js.map": "/Game-React/static/js/main.ee3573f5.js.map"
+    "main.b3c42abf.js.map": "/Game-React/static/js/main.b3c42abf.js.map"
   },
   "entrypoints": [
     "static/css/main.8c257944.css",
-    "static/js/main.ee3573f5.js"
+    "static/js/main.b3c42abf.js"
   ]
 }
