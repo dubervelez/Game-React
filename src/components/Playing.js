@@ -1,18 +1,21 @@
 import React from 'react'
 import Button from './Button'
 import "../styles/_Playing.scss"
-import Rock from "../images/icon-rock.svg";
+
 
 function Playing({ clickagain, jugador1, jugadorColor, jugador2, jugador2Color, resultado }) {
+    function debugg() {
+        return 
+    }
   return (
     <div className="pantalla-jugando">
         <div className='contenedor-boton'>
             <div className='juego-op'>
-                <Button tipo={jugadorColor} imagen={jugador1}></Button>
+                <Button tipo={jugadorColor} imagen={jugador1} clickEleccion={debugg}></Button>
                 <span>YOU PICKED</span>
             </div>
             <div className='juego-op'>
-                <Button tipo={jugador2Color} imagen={jugador2} estado="jugando"></Button> 
+                <Button tipo={jugador2Color} imagen={jugador2} estado="jugando" clickEleccion={debugg}></Button> 
                 <span>THE HOUSE PICKED</span>
             </div>
         </div>

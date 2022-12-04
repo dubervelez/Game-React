@@ -1,18 +1,24 @@
-import "./App.scss";
-import "./styles/style.scss"
+// Importaciones de hojas de estilos
+import "./styles/App.scss";
+import "./styles/_header.scss";
+// Importaciones de componentes
 import Header from "./components/Header";
 import Button from "./components/Button";
 import Rules from "./components/Rules";
 import Playing from "./components/Playing";
+//importaciones de imagenes
 import Paper from "./images/icon-paper.svg";
 import Rock from "./images/icon-rock.svg";
 import Scissors from "./images/icon-scissors.svg";
+
 import { useState } from "react";
 
 
 
 function App() {
-  const roles = [Paper,Rock, Scissors];
+
+  
+  // Creacion de UseState
   const [mostrarRules, setMostrarRules] = useState("");
   const [jugar, setJugar] = useState(false);
   const [eleccionJugador, setEleccionJugador] = useState(Paper);
@@ -22,52 +28,45 @@ function App() {
   const [score, setScore] = useState(0);
   const [resultado, setResultado] = useState("...");
   
+  // Elección aleatoria del jugador 
+  const roles = [Paper,Rock, Scissors];
   function getRandonInt(min, max) {
     return  Math.floor(Math.random() *(max - min)) + min;
   }
 
+  // Funcion que evalua los posibles enfrentamientos del juego y devuelve un resultado 
   function ResultadoJuego(jugador, maquina) {
-    if (jugador == maquina) {
+    if (jugador === maquina) {
       setResultado("YOU TIE")
     }
-    if (jugador == Paper) {
-      if (maquina == Rock) {
+    if (jugador === Paper) {
+      if (maquina === Rock) {
         setResultado("YOU WIN")
         setScore(score + 1)
-      }else if (maquina == Scissors) {
+      }else if (maquina === Scissors) {
         setResultado("YOU LOSE")
       }
     }
-    if (jugador == Rock){
-      if (maquina == Paper) {
+    if (jugador === Rock){
+      if (maquina === Paper) {
         setResultado("YOU LOSE")
-      }else if (maquina == Scissors) {
+      }else if (maquina === Scissors) {
         setResultado("YOU WIN")
         setScore(score + 1)
       }
     }
-    if (jugador == Scissors){
-      if (maquina == Paper) {
+    if (jugador === Scissors){
+      if (maquina === Paper) {
         setResultado("YOU WIN")
         setScore(score + 1)
-      }else if (maquina == Rock) {
+      }else if (maquina === Rock) {
         setResultado("YOU LOSE")
       }
     }
   }
 
 
-  const Mostrar = ()=>{
-    setMostrarRules("activo"); 
-  };
-  const Cerrar = ()=>{
-    setMostrarRules(""); 
-  };
-
-  const jugando = ()=>{
-    setJugar(false);
-  };
-
+// funcionalidad principal
   const elegirRol = (imagen, tipo)=>{
     setJugar(true);
     setEleccionJugador(imagen);
@@ -76,11 +75,11 @@ function App() {
     const animacion = setInterval(()=>{
       let eleccion = roles[getRandonInt(0,3)]
       setEleccionMaquina(eleccion);
-      if (eleccion == Paper) {
+      if (eleccion === Paper) {
         setColorMaquina("paper");
-      }else if (eleccion == Rock ){
+      }else if (eleccion === Rock ){
         setColorMaquina("rock");
-      }else if (eleccion == Scissors ){
+      }else if (eleccion === Scissors ){
         setColorMaquina("scissors");
       };
     },80);
@@ -89,20 +88,31 @@ function App() {
     let eleccion = roles[getRandonInt(0,3)]
     setEleccionMaquina(eleccion);
     
-    if (eleccion == Paper) {
+    if (eleccion === Paper) {
       setColorMaquina("paper");
-    }else if (eleccion == Rock ){
+    }else if (eleccion === Rock ){
       setColorMaquina("rock");
-    }else if (eleccion == Scissors ){
+    }else if (eleccion === Scissors ){
       setColorMaquina("scissors");
     };
     ResultadoJuego(imagen, eleccion);
     }, 2000)
     
-    
+  };
+
+// funcion para devolvernos a elegir rol
+  const jugando = ()=>{
+    setJugar(false);
   };
   
 
+// evento para mostrar la pestaña de rules
+const Mostrar = ()=>{
+  setMostrarRules("activo"); 
+};
+const Cerrar = ()=>{
+  setMostrarRules(""); 
+};
 
 
   return (
@@ -125,10 +135,14 @@ function App() {
             <Playing clickagain={jugando} jugadorColor={eleccionColor} jugador1={eleccionJugador} jugador2={eleccionMaquina} jugador2Color={colorMaquina} resultado={resultado}></Playing>
           )
       }
-      
-      
-      
       <Rules mostrar={mostrarRules} clickCerrar={Cerrar} clickAbrir={Mostrar}></Rules>
+
+      
+      <footer className="attribution">
+  	    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+  	    Coded by <a href="https://github.com/dubervelez">Duberney Velez</a>.
+	    </footer>
+      
     </div>
   );
 }
