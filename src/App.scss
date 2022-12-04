@@ -11,6 +11,7 @@ body{
 
 .App{
     padding: 32px;
+    height: 100%;
 }
 
 main{
@@ -28,9 +29,7 @@ main{
     background-position: 52% ;
     transition: all 0.5s;
 }
-.main-activo{
-    display: none;
-}
+
 
 .boton:nth-child(2){
     display: flex;

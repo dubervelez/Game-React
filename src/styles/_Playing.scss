@@ -17,15 +17,17 @@
 
 .contenedor-boton{
     margin: auto;
-    width: 311px;
-    max-width: 700px;
+    width: 19.4375rem;
+    
     display: flex;
     justify-content: space-between;
 }
 
 .juego-op{
-    display: grid;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .juego-op > span{
@@ -64,4 +66,30 @@
     width: 220px;
     height: 48px;
     box-shadow: 0 3px 3px 0 RGBA(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+
+@media only screen and (min-width: 720px) {
+    .pantalla-jugando{
+        transition: all 0.5s;
+        position: absolute;
+        left: 50%;
+        top: 60%;
+        transform: translate(-50%, -50%);
+    }
+    .contenedor-boton{
+        width: 937px;
+    }
+    .mensaje-resultado{
+        position: absolute;
+    }
+    .juego-op{
+        flex-direction: column-reverse;
+    }
+    .juego-op > span{
+        font-size: 24px;
+        letter-spacing: 3px;
+        margin-bottom: 60px;
+    }
 }

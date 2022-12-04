@@ -5,7 +5,7 @@ import Paper from "../images/icon-paper.svg";
 import Rock from "../images/icon-rock.svg";
 
 
-function Playing() {
+function Playing({ clickagain }) {
   return (
     <div className="pantalla-jugando">
         <div className='contenedor-boton'>
@@ -21,7 +21,7 @@ function Playing() {
         
         <div className='mensaje-resultado'>
             <h2 className='mensaje-h2'>YOU WIN</h2>
-            <button className='mensaje-btn'>PLAY AGAIN</button>
+            <button className='mensaje-btn'  onClick={clickagain}>PLAY AGAIN</button>
         </div>
     </div>
   )
