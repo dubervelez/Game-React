@@ -5,7 +5,7 @@ function Button({ imagen, tipo, estado, clickEleccion }) {
 
   return (
     <div className={`contenedor ${tipo}${estado = ""}`} >
-        <div className="contenedor-imagen" onClick={clickEleccion}>
+        <div className="contenedor-imagen" onClick={()=>{clickEleccion(imagen, tipo)}}>
             <img src={imagen} alt="boton-paper" />
         </div>
     </div>
