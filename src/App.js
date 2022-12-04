@@ -45,11 +45,13 @@ function App() {
         setScore(score + 1)
       }else if (maquina === Scissors) {
         setResultado("YOU LOSE")
+        setScore(score - 1)
       }
     }
     if (jugador === Rock){
       if (maquina === Paper) {
         setResultado("YOU LOSE")
+        setScore(score - 1)
       }else if (maquina === Scissors) {
         setResultado("YOU WIN")
         setScore(score + 1)
@@ -61,6 +63,7 @@ function App() {
         setScore(score + 1)
       }else if (maquina === Rock) {
         setResultado("YOU LOSE")
+        setScore(score - 1)
       }
     }
   }
