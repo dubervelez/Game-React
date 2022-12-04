@@ -20,7 +20,7 @@ function App() {
   const [eleccionMaquina, setEleccionMaquina] = useState(Scissors);
   const [colorMaquina, setColorMaquina] = useState("scissors");
   const [score, setScore] = useState(0);
-  const [resultado, setResultado] = useState("YOU WIN");
+  const [resultado, setResultado] = useState("...");
   
   function getRandonInt(min, max) {
     return  Math.floor(Math.random() *(max - min)) + min;
@@ -72,8 +72,23 @@ function App() {
     setJugar(true);
     setEleccionJugador(imagen);
     setEleccionColor(tipo)
+    setResultado("...")
+    const animacion = setInterval(()=>{
+      let eleccion = roles[getRandonInt(0,3)]
+      setEleccionMaquina(eleccion);
+      if (eleccion == Paper) {
+        setColorMaquina("paper");
+      }else if (eleccion == Rock ){
+        setColorMaquina("rock");
+      }else if (eleccion == Scissors ){
+        setColorMaquina("scissors");
+      };
+    },80);
+    setTimeout(()=>{ 
+      clearInterval(animacion);
     let eleccion = roles[getRandonInt(0,3)]
     setEleccionMaquina(eleccion);
+    
     if (eleccion == Paper) {
       setColorMaquina("paper");
     }else if (eleccion == Rock ){
@@ -82,6 +97,8 @@ function App() {
       setColorMaquina("scissors");
     };
     ResultadoJuego(imagen, eleccion);
+    }, 2000)
+    
     
   };
   
